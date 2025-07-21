@@ -1,0 +1,25 @@
+{
+  "LAYOUT": {
+    "FOOTER": {
+      "COPYRIGHT_MESSAGE": "All rights reserved."
+    }
+  },
+  "PAGES": {
+    "PRESENTATION": {
+      "SLOGAN": "Revolutionizing language learning with AI",
+      "DESCRIPTION": "Uplingo is an interactive language learning platform that uses AI to create personalized stories, making study engaging, practical, and tailored to each learner’s profile.",
+      "TITLE_DOCUMENTATION": "Documentation",
+      "TEXT_DOCUMENTATION": "Click here to see the full project",
+      "ABOUT_ME_TITLE": "About Me",
+      "ABOUT_ME_DESCRIPTION": "I’m a front-end developer with 3+ years of experience, skilled in Angular, React, and Vue, creating efficient, user-focused interfaces and systems."
+    }
+  },
+  "OPTION": {
+    "LANGUAGE": {
+      "ENGLISH": "English",
+      "SPANISH": "Spanish",
+      "FRENCH": "French",
+      "PORTUGUESE_BR": "Portuguese"
+    }
+  }
+}

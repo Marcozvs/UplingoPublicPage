@@ -1,0 +1,119 @@
+<canvas #starsCanvas class="fixed top-0 left-0 w-full h-full -z-10"></canvas>
+
+<div class="w-full h-full flex flex-col gap-8 px-4">
+  <div
+    #firstBlock
+    [@slideInUp]="showFirstBlock ? 'visible' : 'hidden'"
+    class="flex flex-col lg:flex-row gap-8 items-center justify-center align-middle lg:items-start"
+  >
+    <div
+      class="flex flex-col gap-4 w-full lg:w-1/2 items-center lg:items-start"
+    >
+      <h1
+        [@textFadeSlide]="showFirstBlock ? 'visible' : 'hidden'"
+        class="w-full text-center font-roboto text-2xl font-extrabold bg-gradient-to-r from-orange-500 to-yellow-500 bg-clip-text text-transparent"
+      >
+        {{ "PAGES.PRESENTATION.SLOGAN" | translate }}
+      </h1>
+      <p
+        [@textFadeSlideRight]="showFirstBlock ? 'visible' : 'hidden'"
+        class="font-roboto font-medium text-center text-gray-800 dark:text-gray-200"
+      >
+        {{ "PAGES.PRESENTATION.DESCRIPTION" | translate }}
+      </p>
+
+      <div
+        class="w-full aspect-video rounded-md overflow-hidden"
+        [@fadeInScale]="showFirstBlock ? 'visible' : 'hidden'"
+      >
+        <iframe
+          class="w-full h-full rounded-md"
+          src="https://www.youtube.com/embed/LUQ8-kdwiQs?si=i0RswHeUVDGZY-Fr"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+      </div>
+
+      <div
+        class="flex gap-4 w-full bg-gray-100 rounded-md p-4 cursor-pointer hover:bg-gray-200 transition-colors"
+        (click)="handleOpenDocumentation()"
+        [@fadeInScale]="showFirstBlock ? 'visible' : 'hidden'"
+      >
+        <span
+          class="mdi mdi-github text-2xl text-orange-500 font-bold flex items-center justify-center"
+          [@iconPulse]="showFirstBlock ? 'visible' : 'hidden'"
+        ></span>
+        <div class="flex flex-col gap-2">
+          <p class="font-roboto font-bold text-gray-800">
+            {{ "PAGES.PRESENTATION.TITLE_DOCUMENTATION" | translate }}
+          </p>
+          <p class="font-roboto font-medium text-gray-500">
+            {{ "PAGES.PRESENTATION.TEXT_DOCUMENTATION" | translate }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    #aboutMeBlock
+    [@slideInUp]="showAboutMeBlock ? 'visible' : 'hidden'"
+    class="flex flex-col gap-4 justify-center items-center align-middle"
+  >
+    <p
+      [@textFadeSlide]="showAboutMeBlock ? 'visible' : 'hidden'"
+      class="text-center font-roboto text-2xl font-bold text-orange-500"
+    >
+      {{ "PAGES.PRESENTATION.ABOUT_ME_TITLE" | translate }}
+    </p>
+    <img
+      [@fadeInScale]="showAboutMeBlock ? 'visible' : 'hidden'"
+      src="/images/profile.jpg"
+      alt="Marcos photo"
+      class="w-32 rounded-full"
+    />
+    <p
+      [@textFadeSlideRight]="showAboutMeBlock ? 'visible' : 'hidden'"
+      class="font-roboto font-medium text-center text-gray-500 dark:text-gray-200 max-w-xl"
+    >
+      {{ "PAGES.PRESENTATION.ABOUT_ME_DESCRIPTION" | translate }}
+    </p>
+
+    <div
+      class="w-full flex justify-center gap-8 flex-wrap p-4"
+      [@listStagger]="showAboutMeBlock ? 'visible' : 'hidden'"
+    >
+      <a
+        href="https://www.linkedin.com/in/marcoz-silva/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <span class="mdi mdi-linkedin text-4xl text-orange-400"></span>
+      </a>
+      <a
+        href="https://github.com/Marcozvs"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <span class="mdi mdi-github text-4xl text-orange-400"></span>
+      </a>
+      <a
+        href="https://www.youtube.com/@MarcozDev"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <span class="mdi mdi-youtube text-4xl text-orange-400"></span>
+      </a>
+      <a
+        href="https://medium.com/@marcoz-silva"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="flex items-center justify-center"
+      >
+        <img src="/images/medium.svg" alt="Medium" class="w-8" />
+      </a>
+    </div>
+  </div>
+</div>

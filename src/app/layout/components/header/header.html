@@ -1,0 +1,33 @@
+<div class="w-full flex justify-between items-center p-4">
+  <img src="logo.png" alt="Logo" class="w-32 cursor-pointer" />
+
+  <div class="flex gap-2 items-center relative">
+    <button
+      class="p-2 rounded-lg bg-orange-50 text-orange-500 hover:bg-orange-100 focus:ring-2 focus:ring-orange-400 transition"
+      (click)="handleToggleTheme(); $event.stopPropagation()"
+    >
+      <span class="mdi mdi-theme-light-dark text-xl"></span>
+    </button>
+
+    <button
+      class="p-2 rounded-lg bg-orange-50 text-orange-500 hover:bg-orange-100 focus:ring-2 focus:ring-orange-400 transition"
+      (click)="handleToggleLanguageMenu(); $event.stopPropagation()"
+      aria-label="Selecionar idioma"
+    >
+      <span class="mdi mdi-translate text-xl"></span>
+    </button>
+
+    <div
+      *ngIf="isLanguageMenuOpen"
+      class="absolute top-12 right-0 w-48 bg-white-50 shadow-lg border border-gray-200 rounded-lg py-2 z-50"
+    >
+      <button
+        *ngFor="let option of languageOptions"
+        class="block w-full text-left px-4 py-2 hover:bg-orange-50 text-gray-700"
+        (click)="handleSelectLanguage(option.value)"
+      >
+        {{ option.label | translate }}
+      </button>
+    </div>
+  </div>
+</div>
