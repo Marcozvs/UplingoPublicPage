@@ -1,0 +1,25 @@
+{
+  "LAYOUT": {
+    "FOOTER": {
+      "COPYRIGHT_MESSAGE": "Todos los derechos reservados."
+    }
+  },
+  "PAGES": {
+    "PRESENTATION": {
+      "SLOGAN": "Revolucionando el aprendizaje de idiomas con IA",
+      "DESCRIPTION": "Uplingo es una plataforma interactiva de aprendizaje de idiomas que utiliza IA para crear historias personalizadas, haciendo que el estudio sea atractivo, práctico y adaptado al perfil de cada estudiante.",
+      "TITLE_DOCUMENTATION": "Documentación",
+      "TEXT_DOCUMENTATION": "Haz clic aquí para ver el proyecto completo",
+      "ABOUT_ME_TITLE": "Sobre mí",
+      "ABOUT_ME_DESCRIPTION": "Soy un desarrollador front-end con más de 3 años de experiencia, especializado en Angular, React y Vue, creando interfaces y sistemas eficientes centrados en el usuario."
+    }
+  },
+  "OPTION": {
+    "LANGUAGE": {
+      "ENGLISH": "Inglés",
+      "SPANISH": "Español",
+      "FRENCH": "Francés",
+      "PORTUGUESE_BR": "Portugués"
+    }
+  }
+}
